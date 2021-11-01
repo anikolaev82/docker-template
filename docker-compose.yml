@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  rest:
+    container_name: rest
+    restart: always
+    build: ./rest
+    ports:
+      - "5000:5000"
+    command: gunicorn -w 1 -b 0.0.0.0:5000 wsgi:server
+
+  nginx:
+    container_name: proxy
+    restart: always
+    build: ./storage
+    ports:
+      - "5001:5001"
+    depends_on:
+      - rest
