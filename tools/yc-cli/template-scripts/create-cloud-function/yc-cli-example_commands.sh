@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #yc serverless function  create --name my-first-function
 
 echo 'def handler(event, context):
@@ -14,6 +15,8 @@ echo 'def handler(event, context):
 
 #yc serverless function invoke <id_function>
 
+#yc serverless function version set-tag --id <id func> --tag first
+#yc serverless function version remove-tag --id <id func> --tag first
 
 #will do this function public
 #yc serverless function allow-unauthenticated-invoke my-first-function
