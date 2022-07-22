@@ -1,0 +1,11 @@
+In file ~/.terraformrc will add
+
+provider_installation {
+    network_mirror {
+        url = "http://terraform-mirror.yandex.cloud.net/"
+        include = ["registry.terraform.io/*/*"]
+    }
+    direct {
+        exclude = ["registry.terraform.io/*/*"]
+    }
+  }
