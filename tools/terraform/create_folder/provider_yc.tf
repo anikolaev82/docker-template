@@ -10,6 +10,14 @@ variable "folder_id" {
   type = string
 }
 
+variable "access_key" {
+  type = string
+}
+
+variable "secret_key" {
+  type = string
+}
+
 terraform {
   required_providers {
     yandex = {
